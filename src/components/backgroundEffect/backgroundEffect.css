@@ -1,0 +1,34 @@
+.background-effect{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-item{
+    position: absolute;
+    top: -150px;
+    color: rgb(109, 45, 168);
+    text-shadow:  0px 0px 3px rgb(109, 45, 168);
+    font-size: 45px;
+    animation-name: background-item-anim;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes background-item-anim {
+    0% {
+        top: -150px;
+        opacity: 1;
+        transform: rotate(0deg);
+    }  
+    5% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 120vw;
+        transform: rotate(360deg);
+    }
+}
