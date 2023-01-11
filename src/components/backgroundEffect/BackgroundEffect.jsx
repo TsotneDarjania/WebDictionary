@@ -5,21 +5,21 @@ import "./backgroundEffect.css"
 const BackgroundEffect = () => {
 
     const getItems = () => {
+        const alfabet = "abcdefghijklmnopqrstuvwxyz"
 
-        const rows = 12;
-        const columns = 3;
-
+        let letter = "";
         let items = [];
         let left = 0;
         let delay = 0;
-        for (let column = 0; column < columns; column++) {
-            for (let row = 0; row < rows; row++) {
-                delay = column < 2 ? Math.random() * 15 : 10 + Math.random() * 10;
-                const element = <div key={row} style={{left : left + "px", animationDelay : delay + "s"}} className="background-item">a</div>;
-                left += 50;
-                items.push(element);
-            }   
-            left = 0;         
+        let animationTime = 7;
+
+        for (let randomSymbol = 0; randomSymbol < alfabet.length; randomSymbol++) {
+                letter = alfabet[Math.floor(Math.random() * alfabet.length)];
+                delay +=  Math.random() * 1;
+                animationTime = animationTime + Math.random() * 1;
+                left = Math.random() * window.screen.width - 10;
+                const element = <div key={"column_" + randomSymbol} style={{ animationDuration:animationTime+"s" ,left : left + "px", animationDelay : delay + "s"}} className="background-item">{letter}</div>;
+                items.push(element);        
         }
         return items;
     }

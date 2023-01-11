@@ -1,0 +1,41 @@
+.home-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgb(47, 6, 85);
+}
+
+.mode-button{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 3px solid  rgb(106, 33, 189);
+    box-shadow: 0 0px 5px rgb(106, 33, 189);
+    color: white; 
+    background-color: rgb(62, 20, 109);
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 1s;
+    opacity: 0.5;
+    
+}
+.mode-button:hover{
+    background-size: 250px 250px;
+    background-position: -25px -25px;
+    opacity: 1;
+}
+
+.mode-button-icon-files{
+    background-image: url("../../images/input_file_icon.png");
+}
+
+.mode-button-icon-manually{
+    background-image: url("../../images/intro_button_icon_manually.png");
+    
+
+}
